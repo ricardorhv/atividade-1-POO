@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 import model.Carro;
+import model.Cortina;
+import model.Garrafa;
 import model.Impressora;
 import model.Mochila;
 import model.Notebook;
@@ -97,6 +99,30 @@ public class App {
         System.out.println("-------------------");
     }
 
+    public static void criarGarrafa() {
+        Garrafa minhaGarrafa = new Garrafa("Camelback", "Prata", "Plástico", 650, 30, true, false, false, false);
+
+        System.out.println("-------------------");
+
+        minhaGarrafa.abrir();
+
+        System.out.println("Marca: " + minhaGarrafa.getMarca());
+        System.out.println("Cor: " + minhaGarrafa.getCor());
+        System.out.println("Material: " + minhaGarrafa.getMaterial());
+        System.out.println("Quantidade: " + minhaGarrafa.getQuantidade());
+
+        System.out.println("-------------------");
+    }
+
+    public static void criarCortina() {
+        Cortina cortina = new Cortina("Azul", 1.5f, "RTC Decor", "Persiana", "aluminio", true, "sala");
+        System.out.println(cortina.toString());
+
+        cortina.setCor("Verde");
+
+        System.out.println("\n" + cortina.toString());
+    }
+
     public static void main(String[] args) throws Exception {
         int escolha;
         Scanner scanner = new Scanner(System.in);
@@ -128,7 +154,7 @@ public class App {
                 criarCarro();
                 break;
             case 5:
-
+                criarCortina();
                 break;
             case 6:
                 criarTV();
@@ -140,7 +166,7 @@ public class App {
                 criarImpressora();
                 break;
             case 9:
-
+                criarGarrafa();
                 break;
             case 10:
 
