@@ -7,6 +7,7 @@ import model.Impressora;
 import model.Janela;
 import model.Mochila;
 import model.Notebook;
+import model.Porta;
 import model.TV;
 
 public class App {
@@ -139,6 +140,25 @@ public class App {
         System.out.println(minhaJanela.toString());
     }
 
+    public static void criarPorta() {
+        Porta minhaPorta = new Porta('A', 2, 'E', 'M', true, 'C', true);
+
+        System.out.println("Cor da porta: " + minhaPorta.getCor());
+        System.out.println("Tamanho da porta: " + minhaPorta.getTamanho());
+        System.out.println("Tipo da porta: " + minhaPorta.getTipoPorta());
+        System.out.println("Tipo de material da porta: " + minhaPorta.getTipoMaterial());
+        System.out.println("É uma porta nova? " + minhaPorta.isNova());
+        System.out.println("Tipo de fechadura: " + minhaPorta.getTipoFechadura());
+        System.out.println("Possui olho mágico? " + minhaPorta.isOlhoMagico());
+
+        minhaPorta.abrir();
+        minhaPorta.trancar();
+        minhaPorta.abrir();
+        minhaPorta.destrancar();
+        minhaPorta.abrir();
+        minhaPorta.fechar();
+    }
+
     public static void main(String[] args) throws Exception {
         int escolha;
         Scanner scanner = new Scanner(System.in);
@@ -158,7 +178,7 @@ public class App {
 
         switch (escolha) {
             case 1:
-
+                criarPorta();
                 break;
             case 2:
 
