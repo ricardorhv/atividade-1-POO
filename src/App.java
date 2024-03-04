@@ -4,6 +4,7 @@ import model.Carro;
 import model.Cortina;
 import model.Garrafa;
 import model.Impressora;
+import model.Janela;
 import model.Mochila;
 import model.Notebook;
 import model.TV;
@@ -123,6 +124,21 @@ public class App {
         System.out.println("\n" + cortina.toString());
     }
 
+    public static void criarJanela() {
+        Janela minhaJanela = new Janela("transparente", 20, "quadrada", "vidro", false, true);
+
+        minhaJanela.destrancar();
+        minhaJanela.trancar();
+        minhaJanela.abrir();
+        minhaJanela.destrancar();
+        minhaJanela.abrir();
+        minhaJanela.abrir();
+        minhaJanela.fechar();
+        minhaJanela.fechar();
+
+        System.out.println(minhaJanela.toString());
+    }
+
     public static void main(String[] args) throws Exception {
         int escolha;
         Scanner scanner = new Scanner(System.in);
@@ -169,7 +185,7 @@ public class App {
                 criarGarrafa();
                 break;
             case 10:
-
+                criarJanela();
                 break;
 
             default:
