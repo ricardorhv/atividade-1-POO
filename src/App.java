@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import model.Carro;
+import model.Celular;
 import model.Cortina;
 import model.Garrafa;
 import model.Impressora;
@@ -159,6 +160,24 @@ public class App {
         minhaPorta.fechar();
     }
 
+    public static void criarCelular() {
+        Celular meuCelular = new Celular("Samsung", "Preto", "Metal", 128, 6.5, true, false);
+
+        System.out.println("-------------------");
+
+        meuCelular.ligar();
+
+        System.out.println("Marca: " + meuCelular.getMarca());
+        System.out.println("Cor: " + meuCelular.getCor());
+        System.out.println("Material: " + meuCelular.getMaterial());
+        System.out.println("Armazenamento: " + meuCelular.getArmazenamento());
+        System.out.println("Tamanho de tela: " + meuCelular.getTamanhoTela());
+        System.out.println("Está ligado? : " + meuCelular.isLigado());
+        System.out.println("Está carregando? : " + meuCelular.isCarregando());
+
+        System.out.println("-------------------");
+    }
+
     public static void main(String[] args) throws Exception {
         int escolha;
         Scanner scanner = new Scanner(System.in);
@@ -181,7 +200,7 @@ public class App {
                 criarPorta();
                 break;
             case 2:
-
+                criarCelular();
                 break;
             case 3:
                 criarMochila();
